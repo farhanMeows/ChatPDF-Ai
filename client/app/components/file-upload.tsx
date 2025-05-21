@@ -7,11 +7,21 @@ const FileUpload = () => {
     el.setAttribute("type", "file");
     el.setAttribute("accept", "application/pdf");
 
-    el.addEventListener("change", (ev) => {
+    el.addEventListener("change", async (ev) => {
       const target = ev.target as HTMLInputElement;
       if (target.files && target.files.length > 0) {
         console.log(target.files);
         const file = target.files[0];
+
+        const formData = new FormData();
+        formData.append("pdf", file);
+
+        await fetch("http://localhost:8000/upload/pdf", {
+          method: "POST",
+          body: formData,
+        });
+
+        console.log("file uploaded successfully");
       }
     });
 
