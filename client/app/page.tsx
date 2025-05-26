@@ -11,20 +11,18 @@ export default function Home() {
 
   if (!isSignedIn) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-        <div className="mx-auto flex min-h-screen max-w-7xl items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
-          <div className="w-full max-w-md space-y-8">
-            <div className="text-center">
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-                PDF RAG Chat
-              </h1>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                Sign in to start chatting with your PDFs
-              </p>
-            </div>
-            <div className="mt-8">
-              <SignIn />
-            </div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 px-4 py-8 sm:px-6 lg:px-8">
+        <div className="w-full max-w-md space-y-8 text-center">
+          <div className="items-center justify-center mr-10">
+            <h1 className="text-3xl font-bold tracking-tight  text-gray-900 dark:text-white">
+              ChatPDF-Ai
+            </h1>
+            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Sign in to start chatting with your PDFs
+            </p>
+          </div>
+          <div className="mt-8">
+            <SignIn />
           </div>
         </div>
       </div>
@@ -37,7 +35,7 @@ export default function Home() {
         <header className="border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-              PDF RAG Chat
+              ChatPDF-Ai
             </h1>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               Upload your PDF and chat with its contents
