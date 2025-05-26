@@ -133,7 +133,7 @@ Before you start, make sure you have:
   - Qdrant (Vector Database)
   - Valkey (Redis-compatible queue)
 
-(https://raw.githubusercontent.com/yourusername/pdf-rag/main/screenshot.png)
+(https://github.com/farhanMeows/ChatPDF-Ai/blob/master/client/assets/wireFrame.png)
 
 ## 🔍 Why Valkey?
 
