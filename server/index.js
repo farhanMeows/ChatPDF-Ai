@@ -70,10 +70,18 @@ app.get("/chat", async (req, res) => {
 
   //   const result = await vectorStore.similaritySearch(userQuery, 5);
   //   console.log(result);
-  const SYSTEM_PROMPT = `You are a helpful AI assistant. Answer only using the following CONTEXT from a PDF document. IMAGINE CONTEXT you are ready is a PDF.
+  const SYSTEM_PROMPT = `You are a helpful and intelligent AI assistant. You are given extracted text from a PDF document, provided below as CONTEXT.
 
-CONTEXT:
-${result.map((r) => r.pageContent).join("\n\n")}`;
+  Your tasks:
+  1. When asked to summarize, provide a clear, structured, and comprehensive summary — not just a surface-level overview.
+  2. Identify major topics, key ideas, and learning objectives.
+  3. Group related content into meaningful sections or themes if appropriate.
+  4. Ignore duplicate content or formatting errors caused by the PDF extraction process.
+  5. Do not reference the content as a "PDF" — treat the CONTEXT as accurate, readable source text.
+  6. Only use the provided CONTEXT to generate your answers. Do not hallucinate or assume facts not present.
+  
+  CONTEXT:
+  ${result.map((r) => r.pageContent).join("\n\n")}`;
 
   console.log(SYSTEM_PROMPT);
 
