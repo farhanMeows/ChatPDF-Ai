@@ -84,7 +84,8 @@ Before you start, make sure you have:
    ```
 
 6. **Open your browser**
-   Visit `http://localhost:3000`
+   - Main application: Visit `http://localhost:3000`
+   - Vector DB Dashboard: Visit `http://localhost:6333/dashboard` to monitor your PDF embeddings
 
 ## 💡 How to Use
 
@@ -127,6 +128,18 @@ Before you start, make sure you have:
   - Express
   - Ollama
   - Bull (for job processing)
+  - Qdrant (Vector Database)
+  - Valkey (Redis-compatible queue)
+
+## 🔍 Why Valkey?
+
+Used Valkey instead of Redis for our Bull queue because:
+
+- **Performance**: Valkey is optimized for high-throughput scenarios, making it perfect for handling multiple PDF processing jobs
+- **Memory Efficiency**: Better memory management for large PDF processing tasks
+- **Compatibility**: Fully compatible with Redis protocol, so it works seamlessly with Bull
+- **Modern Features**: Built-in support for modern data structures and patterns
+- **Resource Usage**: Lower resource footprint compared to Redis while maintaining the same functionality
 
 ## 🤝 Contributing
 
