@@ -1,7 +1,5 @@
 # PDF RAG Chat 🤖
 
-![PDF RAG Chat Screenshot](https://raw.githubusercontent.com/yourusername/pdf-rag/main/screenshot.png)
-
 A modern AI-powered chat application that lets you upload PDFs and have intelligent conversations with their content! Built with Next.js 14, Express, and powered by Ollama's deepseek-r1 model for advanced natural language understanding. Features real-time PDF processing with Bull queues, secure authentication via Clerk, and a beautiful UI crafted with Tailwind CSS and shadcn/ui.
 
 ## 🛠️ Prerequisites
